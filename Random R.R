@@ -1,0 +1,7 @@
+install.packages("party")
+library(party)
+install.packages("randomForest")
+library(randomForest)
+View(head(readingSkills))
+output <- randomForest(nativeSpeaker ~ age + shoeSize + score, data=readingSkills)
+print(output)
